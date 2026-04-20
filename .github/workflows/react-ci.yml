@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
   pull_request:
     branches: ["main"]
 
@@ -12,9 +12,9 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: action/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setu Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
@@ -26,5 +26,5 @@ jobs:
       - name: Type check (TS)
         run: npm run build --if-present
 
-      - name: Build project
+      - name: "Build project"
         run: npm run build
